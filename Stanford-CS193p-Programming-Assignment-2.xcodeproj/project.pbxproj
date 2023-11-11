@@ -11,6 +11,8 @@
 		E42B7D162AFF85F30076D9B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B7D152AFF85F30076D9B5 /* ContentView.swift */; };
 		E42B7D182AFF85F70076D9B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42B7D172AFF85F70076D9B5 /* Assets.xcassets */; };
 		E42B7D1B2AFF85F70076D9B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42B7D1A2AFF85F70076D9B5 /* Preview Assets.xcassets */; };
+		E42B7D262AFF869E0076D9B5 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B7D252AFF869E0076D9B5 /* MemoryGame.swift */; };
+		E42B7D282AFF885F0076D9B5 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42B7D272AFF885F0076D9B5 /* EmojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E42B7D152AFF85F30076D9B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E42B7D172AFF85F70076D9B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E42B7D1A2AFF85F70076D9B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E42B7D252AFF869E0076D9B5 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		E42B7D272AFF885F0076D9B5 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				E42B7D152AFF85F30076D9B5 /* ContentView.swift */,
 				E42B7D172AFF85F70076D9B5 /* Assets.xcassets */,
 				E42B7D192AFF85F70076D9B5 /* Preview Content */,
+				E42B7D252AFF869E0076D9B5 /* MemoryGame.swift */,
+				E42B7D272AFF885F0076D9B5 /* EmojiMemoryGame.swift */,
 			);
 			path = "Stanford-CS193p-Programming-Assignment-2";
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42B7D262AFF869E0076D9B5 /* MemoryGame.swift in Sources */,
 				E42B7D162AFF85F30076D9B5 /* ContentView.swift in Sources */,
 				E42B7D142AFF85F30076D9B5 /* Stanford_CS193p_Programming_Assignment_2App.swift in Sources */,
+				E42B7D282AFF885F0076D9B5 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
