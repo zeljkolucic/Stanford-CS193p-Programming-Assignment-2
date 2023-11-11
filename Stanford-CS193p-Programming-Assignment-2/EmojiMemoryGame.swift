@@ -23,7 +23,7 @@ class EmojiMemoryGame: ObservableObject {
     }
     
     func choose(_ card: MemoryGame<String>.Card) {
-        game.choose(card)
+        game.choose(card: card)
     }
     
     func shuffle() {
