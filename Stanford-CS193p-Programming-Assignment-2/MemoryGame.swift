@@ -19,15 +19,18 @@ struct MemoryGame<CardContent> {
         }
     }
     
-    func choose(_ card: CardContent) {
-        
+    mutating func choose(_ card: Card) {
+        if let chosenIndex = cards.firstIndex(where: { $0.id == card.id }) {
+            cards[chosenIndex].isFaceUp.toggle()
+        }
     }
     
     mutating func shuffle() {
         cards.shuffle()
     }
     
-    struct Card {
+    struct Card: Identifiable{
+        let id = UUID()
         var isFaceUp = false
         var isMatched = false
         let content: CardContent
