@@ -18,8 +18,13 @@ struct EmojiMemoryGameView: View {
                 cards
                     .animation(.default, value: viewModel.cards)
             }
-            Button("New Game") {
-                viewModel.startNewGame()
+            HStack {
+                Text("Score: \(viewModel.score)")
+                Spacer()
+                Button("New Game") {
+                    viewModel.startNewGame()
+                }
+                .buttonStyle(.bordered)
             }
         }
         .padding()
