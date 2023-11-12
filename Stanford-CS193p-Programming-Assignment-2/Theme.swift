@@ -13,7 +13,7 @@ struct Theme {
     let numberOfPairsOfCards: Int
     let color: String
     
-    init(name: String, emojis: [String], numberOfPairsOfCards: Int, color: String) {
+    private init(name: String, emojis: [String], numberOfPairsOfCards: Int, color: String) {
         self.name = name
         self.emojis = emojis
         self.numberOfPairsOfCards = min(emojis.count, numberOfPairsOfCards)
