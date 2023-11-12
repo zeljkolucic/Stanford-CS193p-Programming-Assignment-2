@@ -5,18 +5,30 @@
 //  Created by Zeljko Lucic on 11.11.23..
 //
 
-import Foundation
+import SwiftUI
 
 class EmojiMemoryGame: ObservableObject {
-    private static let emojis = ["👻", "🎃", "🕷️", "😈", "💀", "🕸️", "🧙", "🙀", "👹", "😱", "☠️", "🍭"]
+    @Published private var game: MemoryGame<String>
+    private var selectedTheme: Theme
     
-    @Published private var game = MemoryGame(numberOfPairsOfCards: 4, cardContentFactory: { pairIndex in
-        if emojis.indices.contains(pairIndex) {
-            return emojis[pairIndex]
-        } else {
-            return "‼️"
+    var color: Color {
+        switch selectedTheme.color {
+        case "orange":
+            return .orange
+        case "green":
+            return .green
+        case "red":
+            return .red
+        default:
+            return .gray
         }
-    })
+    }
+    
+    init() {
+        let theme = Theme.random()
+        selectedTheme = theme
+        game = Self.createMemoryGame(with: theme)
+    }
     
     var cards: [MemoryGame<String>.Card] {
         game.cards
@@ -27,6 +39,15 @@ class EmojiMemoryGame: ObservableObject {
     }
     
     func startNewGame() {
-        game.startNewGame()
+        let theme = Theme.random()
+        selectedTheme = theme
+        game = Self.createMemoryGame(with: theme)
+    }
+    
+    static func createMemoryGame(with theme: Theme) -> MemoryGame<String> {
+        let emojis = theme.numberOfPairsOfCards > theme.emojis.count ? theme.emojis : theme.emojis.shuffled()
+        return MemoryGame(numberOfPairsOfCards: theme.numberOfPairsOfCards, cardContentFactory: { pairIndex in
+            return emojis[pairIndex]
+        })
     }
 }
