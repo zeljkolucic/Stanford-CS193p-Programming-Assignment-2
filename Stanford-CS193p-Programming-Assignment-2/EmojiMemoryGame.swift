@@ -19,6 +19,12 @@ class EmojiMemoryGame: ObservableObject {
             return .green
         case "red":
             return .red
+        case "yellow":
+            return .yellow
+        case "purple":
+            return .purple
+        case "blue":
+            return .blue
         default:
             return .gray
         }

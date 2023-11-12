@@ -34,7 +34,7 @@ struct EmojiMemoryGameView: View {
                     }
             }
         })
-        .foregroundStyle(.orange)
+        .foregroundStyle(viewModel.color)
     }
 }
 

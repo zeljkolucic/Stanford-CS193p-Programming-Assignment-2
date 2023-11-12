@@ -48,20 +48,20 @@ struct Theme {
             name: "Animals",
             emojis: ["🐱", "🐰", "🐶", "🐻", "🐷", "🐴", "🐮", "🐮", "🦆"],
             numberOfPairsOfCards: 6,
-            color: "green"
+            color: "yellow"
         ),
         Theme(
             name: "Vegetables",
             emojis: ["🍆", "🌶️", "🥕", "🥦", "🥔", "🌽", "🧅", "🧄", "🍅"],
             numberOfPairsOfCards: 9,
-            color: "green"
+            color: "purple"
         ),
         Theme(
             name: "Weather",
             emojis: ["☁️", "🌦️", "🌧️", "🌩️", "❄️", "☀️"],
             numberOfPairsOfCards: 6,
-            color: "green"
-        ),
+            color: "blue"
+        )
     ]
 }
 
