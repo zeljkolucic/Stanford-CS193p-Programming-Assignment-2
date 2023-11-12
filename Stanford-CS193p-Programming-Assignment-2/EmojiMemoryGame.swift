@@ -11,6 +11,10 @@ class EmojiMemoryGame: ObservableObject {
     @Published private var game: MemoryGame<String>
     private var selectedTheme: Theme
     
+    var themeName: String {
+        selectedTheme.name
+    }
+    
     var color: Color {
         switch selectedTheme.color {
         case "orange":
